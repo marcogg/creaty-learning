@@ -10,9 +10,12 @@
 }
 
 .header-bg {
-    background: linear-gradient(90deg, rgba(255, 162, 0, 1) 0%, rgba(255, 197, 0, 1) 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 77%, 48% 100%, 22% 79%, 0% 99%);
-    // clip-path: url(#curves.svg);
+    // background: linear-gradient(90deg, rgba(255, 162, 0, 1) 0%, rgba(255, 197, 0, 1) 100%);
+    // clip-path: polygon(0% 0%, 100% 0%, 100% 77%, 48% 100%, 22% 79%, 0% 99%);
+    background-image: url('../img/clip-path.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 4%;
 }
 
 .header {
@@ -24,7 +27,7 @@
 
 .bar-glass {
     background: linear-gradient(90deg, rgba(255, 255, 0, .85), rgba(255, 120, 0, .85));
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(102, 85, 12, 0.57);
     backdrop-filter: blur( 12.5px);
     -webkit-backdrop-filter: blur( 12.5px);
     border-radius: 30px;
@@ -71,5 +74,26 @@
     }
     to {
         transform: scale(1.05);
+    }
+}
+
+a {
+    font-weight: bolder;
+    color: white;
+    display: block;
+    margin: auto;
+    max-width: 200px;
+    text-decoration: none;
+    &.btn-cta {
+        border-radius: 10px;
+        padding: 3% 7%;
+        font-family: $font-family;
+        text-align: center;
+        &.black {
+            background-color: $dark-grey;
+            &:hover {
+                background-color: $black;
+            }
+        }
     }
 }

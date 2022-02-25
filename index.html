@@ -9,39 +9,28 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <!-- STYLES -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="scss/main.css">
     <!-- End: Head -->
     <title>Creaty Leraning | Cursos digitales para emprendedores y Freelancers </title>
 </head>
 
 <body>
-    <!-- BEGIN:NAV -->
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html#acerca" class="nav-link">Acerca de</a></li>
-            <li><a href="index.html#curso" class="nav-link">Conoce el curso</a></li>
-            <li><a href="index.html#testimonios" class="nav-link">Testimonios</a></li>
-            <li><a href="index.html#reserva" class="btn btn-cta">Reserva tu lugar</a></li>
-        </ul>
-    </nav>
-    <!-- END:NAV -->
-
     <main>
         <!-- BEGIN: HEADER -->
         <section id="" class="header-bg">
             <header>
-                <?php
-                    require("lib/nav.php")
-                ?>
+                <!-- BEGIN:NAV -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html#acerca" class="nav-link">Acerca de</a></li>
+                        <li><a href="index.html#curso" class="nav-link">Conoce el curso</a></li>
+                        <li><a href="index.html#testimonios" class="nav-link">Testimonios</a></li>
+                        <li><a href="index.html#reserva" class="btn btn-cta">Reserva tu lugar</a></li>
+                    </ul>
+                </nav>
+                <!-- END:NAV -->
             </header>
             <div class="container header">
-                <svg width="0" height="0" id="curves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1245.3" style="enable-background:new 0 0 1920 1245.3;" xml:space="preserve">
-     <defs>
-         <clipPath id="curves">
-             <path d="M0,0v1014.8c0,0,166.4,230.5,538,230.5s427.7-271.5,682-271.5s700,207.3,700,207.3V0H0z"/>
-         </clipPath>
-     </defs>
-</svg>
                 <div class="row">
                     <div class="col-6">
                         <div class="card">
@@ -51,8 +40,9 @@
                             </h1>
                         </div>
                         <p class="text-center">Todo lo que necesitas para lanzar tu proyecto al mundo digital</p>
-                        <h3 class="text-center">Aprovecha: <span class="precio-promo">$5,400</span> a $3,990</h3>
+                        <h3 class="text-center">De <span class="precio-promo">$5,400</span> a $3,990</h3>
                         <h2 class="text-center">Iniciamos el 5 de Abril</h2>
+                        <a class="btn-cta black" href="">Inscribirme al curso</a>
                         <div class="bar-glass"></div>
                     </div>
                     <div class="col-6">
@@ -75,7 +65,7 @@
                         <!-- BEGIN: BULLET 1 -->
                         <div class="row">
                             <div class="col-3">
-                                <img src="img/iconos/diseno-web.png">
+                                <img src="img/iconos/diseno-web.png" class="img-responsive">
                             </div>
                             <div class="col-9">
                                 <h3 class="font-2rem">Diseñar y crear tu sitio web</h3>
@@ -86,7 +76,7 @@
                         <!-- BEGIN: BULLET 2 -->
                         <div class="row">
                             <div class="col-3">
-                                <img src="img/iconos/tienda-en-linea.png">
+                                <img src="img/iconos/tienda-en-linea.png" class="img-responsive">
                             </div>
                             <div class="col-9">
                                 <h3 class="font-2rem">Montar tu tienda en línea</h3>
@@ -97,7 +87,7 @@
                         <!-- BEGIN: BULLET 3 -->
                         <div class="row">
                             <div class="col-3">
-                                <img src="img/iconos/llevar-trafico-web.png">
+                                <img src="img/iconos/llevar-trafico-web.png" class="img-responsive">
                             </div>
                             <div class="col-9">
                                 <h3 class="font-2rem">Llevar tráfico a tu sitio</h3>
@@ -108,7 +98,7 @@
                         <!-- BEGIN: BULLET 4 -->
                         <div class="row">
                             <div class="col-3">
-                                <img src="img/iconos/marketing-digital.png">
+                                <img src="img/iconos/marketing-digital.png" class="img-responsive">
                             </div>
                             <div class="col-9">
                                 <h3 class="font-2rem">Estrategias de publicidad en línea</h3>
