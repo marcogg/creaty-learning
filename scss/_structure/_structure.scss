@@ -1,37 +1,48 @@
-
 // FONTS
-.font-uppercase{
+.font-uppercase {
     text-transform: uppercase;
 }
 
-.font-light{
+.font-light {
     font-weight: 200;
 }
 
-.font-bold{
-    font-weight:700;
+.font-bold {
+    font-weight: 700;
 }
 
-.font-13rem{
-    font-size:1.3em;
+.font-13rem {
+    font-size: 1.3em;
 }
 
-.font-15rem{
-    font-size:1.5em;
+.font-15rem {
+    font-size: 1.5em;
 }
 
-.font-2rem{
+.font-2rem {
     font-size: 2rem;
 }
 
-.font-3rem{
+.font-3rem {
     font-size: 3rem;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.text-orange{
-    color:$yellow1;
+.text-orange {
+    color: $yellow1;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.m-auto {
+    margin: auto !important;
 }
