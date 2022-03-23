@@ -12,16 +12,21 @@ $font-height: 1;
 // colors
 html,
 body {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     left: 0;
     top: 0;
     font-size: 100%;
-    background: linear-gradient($yellowEgg, $yellowBird);
+    background: linear-gradient($orange2, $yellowBird);
     background-repeat: no-repeat;
     height: auto;
+    animation: bg-body 3s ease-in-out infinite alternate;
+    &.full-height {
+        height: 100vh !important;
+    }
 }
 
 * {
@@ -32,7 +37,7 @@ body {
 
 // typography
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.35rem;
 }
 
 h2 {

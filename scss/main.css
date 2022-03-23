@@ -12,17 +12,26 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0;
   font-size: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFD500), to(#FFE600));
-  background: linear-gradient(#FFD500, #FFE600);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7a900), to(#FFE600));
+  background: linear-gradient(#f7a900, #FFE600);
   background-repeat: no-repeat;
   height: auto;
+  -webkit-animation: bg-body 3s ease-in-out infinite alternate;
+          animation: bg-body 3s ease-in-out infinite alternate;
+}
+
+html.full-height,
+body.full-height {
+  height: 100vh !important;
 }
 
 * {
@@ -32,7 +41,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.35rem;
 }
 
 h2 {
@@ -318,6 +327,7 @@ p {
   background-image: url("../img/clip-path.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .header {
@@ -339,10 +349,10 @@ p {
   border-radius: 30px;
   width: 60px;
   height: 120px;
-  position: relative;
+  position: absolute;
   z-index: 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  animation: up-down 3.5s ease-in-out infinite alternate-reverse;
+  animation: up-down 5.5s ease-in-out infinite alternate-reverse;
 }
 
 .circle-glass {
@@ -430,7 +440,7 @@ p {
 
 .target-section .people-target {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   right: 0;
   height: 250px;
   width: 100%;
@@ -450,7 +460,7 @@ p {
 }
 
 .target-section .img-target {
-  max-width: 320px;
+  max-width: 310px;
   position: relative;
   z-index: 3;
 }
@@ -498,11 +508,19 @@ p {
 
 .card.instructor .thumbnail {
   width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: auto;
   height: auto;
   border-radius: 100%;
   border: white 6px solid;
   -webkit-box-shadow: 10px 10px 10px rgba(255, 187, 0, 0.95);
           box-shadow: 10px 10px 10px rgba(255, 187, 0, 0.95);
+}
+
+.card.static {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .img-responsive {
@@ -532,10 +550,10 @@ p {
 }
 
 section.target-section {
-  background-image: url("/img/bg-como-hacer-sitios-web.svg");
+  background-image: url("../img/bg-como-hacer-sitios-web.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
 }
 
 ul.target {
@@ -557,10 +575,11 @@ ul.target {
 ul.target li {
   list-style-type: none;
   line-height: 2em;
+  font-size: 1.35rem;
 }
 
 .bg-temario {
-  background-image: url("/img/bg-temario-diseno-web.svg");
+  background-image: url("../img/bg-temario-diseno-web.svg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -614,6 +633,8 @@ button.btn:before {
   margin-right: 10px;
   font-size: 2rem;
   line-height: 0;
+  position: relative;
+  bottom: -8px;
 }
 
 button.btn:hover {
@@ -747,7 +768,7 @@ ul.ventajas li {
   font-size: 1.25em;
   padding: 2px 0 20px 35px;
   list-style: none;
-  background-image: url("/img/ventajas.svg");
+  background-image: url("../img/ventajas.svg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 30px 30px;
@@ -766,9 +787,12 @@ ul.ventajas li {
   border-radius: 20px 20px 0 0;
   padding: 10px 15px;
   bottom: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  right: 10%;
+  left: 10%;
+  margin: auto;
   z-index: 1000;
+  width: 200px;
+  cursor: pointer;
 }
 
 .btn.fixed {
@@ -787,6 +811,32 @@ ul.ventajas li {
 
 .btn:hover {
   background-color: #FF5E00;
+}
+
+.form {
+  position: relative;
+  z-index: 100;
+  -webkit-animation: none;
+          animation: none;
+  background-color: white;
+  padding: 1% 3%;
+  border-radius: 15px;
+}
+
+.form .parche {
+  background-color: #ffffff;
+  backdrop-filter: blur(250px);
+  -webkit-backdrop-filter: blur(250px);
+  width: 80%;
+  height: 50px;
+  position: absolute;
+  bottom: 34px;
+  z-index: 300;
+}
+
+.form p {
+  line-height: 1em;
+  font-size: 1em;
 }
 
 @-webkit-keyframes up-down {
@@ -863,6 +913,30 @@ ul.ventajas li {
   }
 }
 
+@-webkit-keyframes bg-body {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+@keyframes bg-body {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
 a {
   font-weight: bolder;
   color: white;
@@ -885,5 +959,10 @@ a.btn-cta.black {
 
 a.btn-cta.black:hover {
   background-color: #0c0c0c;
+}
+
+.text-important {
+  font-weight: bolder;
+  color: #f79400;
 }
 /*# sourceMappingURL=main.css.map */

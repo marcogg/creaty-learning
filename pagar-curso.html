@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Creaty Learning | Inscríbete</title>
+</head>
+
+<body class="bg-temario full-height">
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6 col-12-sm form text-center">
+                        <h2>¡Excelente!</h2>
+                        <p>Ahora solo ayúdanos con tu pago</p>
+                        <p>Curso de 4 semanas de Lunes a Jueves</p>
+                        <h2 class="text-center">De <span class="precio-promo">$5,400</span> a $3,990 MXN </h2>
+                        <p>Puedes pagar a <b>3 Meses Sin Intereses</b></p>
+                        <p>
+                            <small>O recibe un descuento de $150 al pagar de contado</small>
+                        </p>
+
+                        <div id="smart-button-container">
+                            <div style="text-align: center;">
+                                <div id="paypal-button-container"></div>
+                            </div>
+                        </div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+                        <script>
+                            function initPayPalButton() {
+                                paypal.Buttons({
+                                    style: {
+                                        shape: 'rect',
+                                        color: 'black',
+                                        layout: 'vertical',
+                                        label: 'checkout',
+
+                                    },
+
+                                    createOrder: function(data, actions) {
+                                        return actions.order.create({
+                                            purchase_units: [{
+                                                "description": "Curso completo de Diseño Web con Wordpress de 4 semanas en Creaty Learning",
+                                                "amount": {
+                                                    "currency_code": "MXN",
+                                                    "value": 3990
+                                                }
+                                            }]
+                                        });
+                                    },
+
+                                    onApprove: function(data, actions) {
+                                        return actions.order.capture().then(function(orderData) {
+
+                                            // Full available details
+                                            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                                            // Show a success message within this page, e.g.
+                                            const element = document.getElementById('paypal-button-container');
+                                            element.innerHTML = '';
+                                            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                                            // Or go to another URL:  actions.redirect('thank_you.html');
+
+                                        });
+                                    },
+
+                                    onError: function(err) {
+                                        console.log(err);
+                                    }
+                                }).render('#paypal-button-container');
+                            }
+                            initPayPalButton();
+                        </script>
+                        <p class="text-important">Nota: Considera también el pago al inicio del curso de tu dominio y hosting para poder tener tu sitio en internet de aproximadamnte $250MXN</p>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- BEGIN: WHATSAPP BUTTON -->
+    <div id="botonWhatsapp">
+        <!-- <div style="background-color: white; border-radius: 10px; padding: 5px 15px; position: fixed; right: 50px; bottom: 50px; width: 120px; z-index: 1;">
+            <p style="font-size:11px; color: #242424"><span style="font-weight: bolder; font-size: 14px; ;">¿Tienes dudas?</span><br> Mándanos Whats</p>
+        </div> -->
+        <div style="background-color:#02a047; width: 60px; height:60px; border-radius: 50%; position:fixed; bottom: 50px; right: 15px; z-index:50000; display: block; ">
+            <div style="margin: auto; display: block; position: relative; left: 18%; top: 13%">
+                <a href="https://wa.me/525530388534?text=Hola%20Marco!%20Me%20interesa%20conocer%20detalles%20del%20curso%20de%20desarrollo%20web%20con%20Wordpress">
+                    <img src="img/whatsapp-outline-01.png" alt="Whatsapp" style="width: 37px !important">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- END: WHATSAPP BUTTON -->
+</body>
+
+</html>
