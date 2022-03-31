@@ -785,7 +785,6 @@ ul.ventajas li {
   background-color: #0c0c0c;
   text-align: center;
   border-radius: 20px 20px 0 0;
-  padding: 10px 15px;
   bottom: 0;
   right: 10%;
   left: 10%;
@@ -807,10 +806,6 @@ ul.ventajas li {
 
 .btn a {
   max-width: 300px;
-}
-
-.btn:hover {
-  background-color: #FF5E00;
 }
 
 .form {
@@ -961,6 +956,67 @@ a.btn-cta.black:hover {
   background-color: #0c0c0c;
 }
 
+footer {
+  background-color: #161616;
+  padding-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer h2 {
+  color: #ffffff;
+  text-align: left;
+  line-height: 0.5em;
+}
+
+footer p {
+  color: #ffffff;
+  text-align: left;
+}
+
+footer .boton {
+  background-color: #FF5E00;
+  border-radius: 15px;
+  padding: 2% 5%;
+  text-align: center;
+  display: block;
+  line-height: 1.5em;
+}
+
+footer .boton:hover {
+  background-color: #FF9700;
+}
+
+footer .boton:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-image: url("/img/whatsapp-outline-01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+footer .aviso p {
+  font-size: 1em;
+  display: block;
+  text-align: center;
+}
+
 .text-important {
   font-weight: bolder;
   color: #f79400;
@@ -1027,6 +1083,6 @@ a.btn-cta.black:hover {
 }
 
 .card.static.minHeight-400 {
-  min-height: 490px;
+  min-height: 500px;
 }
 /*# sourceMappingURL=main.css.map */

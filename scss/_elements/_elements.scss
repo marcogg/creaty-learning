@@ -394,7 +394,7 @@
                         background-color: $black;
                         text-align: center;
                         border-radius: 20px 20px 0 0;
-                        padding: 10px 15px;
+                        // padding: 10px 15px;
                         bottom: 0;
                         right: 10%;
                         left: 10%;
@@ -414,9 +414,9 @@
                     & a {
                         max-width: 300px;
                     }
-                    &:hover {
-                        background-color: $orange;
-                    }
+                    // &:hover {
+                    //     background-color: $ye;
+                    // }
                 }
                 
                 // FORMS
@@ -507,6 +507,55 @@
                     }
                 }
                 
+                //FOOTER
+                footer {
+                    background-color: $dark-grey;
+                    padding-bottom: 5%;
+                    display: flex;
+                    align-items: center;
+                    & .row {
+                        display: flex;
+                    }
+                    & h2 {
+                        color: $white;
+                        text-align: left;
+                        line-height: 0.5em;
+                    }
+                    & p {
+                        color: $white;
+                        text-align: left;
+                    }
+                    & .boton {
+                        background-color: $orange;
+                        border-radius: 15px;
+                        padding: 2% 5%;
+                        text-align: center;
+                        display: block;
+                        line-height: 1.5em;
+                        &:hover {
+                            background-color: $yellow1;
+                        }
+                        &:before {
+                            content: "";
+                            width: 18px;
+                            height: 18px;
+                            display: inline-block;
+                            background-image: url('/img/whatsapp-outline-01.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 18px 18px;
+                            margin-right: 5px;
+                            position: relative;
+                            top: 4px;
+                        }
+                    }
+                    & .aviso p {
+                        font-size: 1em;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+                
                 .text-important {
                     font-weight: bolder;
                     color: $orange3;
@@ -574,7 +623,7 @@
                 .card.static.min {
                     &Height {
                         &-400 {
-                            min-height: 490px;
+                            min-height: 500px;
                         }
                     }
                 }
