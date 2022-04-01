@@ -614,7 +614,20 @@ ul.target li {
       justify-content: space-around;
 }
 
-button.btn {
+button.cta-btn {
+  display: block;
+  margin: auto;
+  background-color: #0c0c0c;
+  padding: 10% 25%;
+  border: none;
+  border-radius: 20px 20px 0 0;
+}
+
+button.cta-btn:hover {
+  background-color: #f79400;
+}
+
+button.btn.acordeon {
   padding: 5%;
   font-family: "Titillium Web", sans-serif;
   font-weight: 700;
@@ -632,7 +645,7 @@ button.btn {
   cursor: pointer;
 }
 
-button.btn:before {
+button.btn.acordeon:before {
   content: '+';
   margin-right: 10px;
   font-size: 2rem;
@@ -641,26 +654,26 @@ button.btn:before {
   bottom: -8px;
 }
 
-button.btn:hover {
+button.btn.acordeon:hover {
   background-color: #FF9700;
   color: #161616;
   -webkit-box-shadow: inset 500px 0 0 0 #FFD500;
           box-shadow: inset 500px 0 0 0 #FFD500;
 }
 
-button.btn.semana1 {
+button.btn.acordeon.semana1 {
   background-color: #fffb00;
 }
 
-button.btn.semana2 {
+button.btn.acordeon.semana2 {
   background-color: #ffd000;
 }
 
-button.btn.semana3 {
+button.btn.acordeon.semana3 {
   background-color: #f7a900;
 }
 
-button.btn.semana4 {
+button.btn.acordeon.semana4 {
   background-color: #f79400;
 }
 
@@ -786,15 +799,12 @@ ul.ventajas li {
 }
 
 .btn.inscripcion {
-  background-color: #0c0c0c;
-  text-align: center;
-  border-radius: 20px 20px 0 0;
-  bottom: 0;
-  right: 10%;
-  left: 10%;
-  margin: auto;
+  left: 47%;
+  -webkit-transform: translateX(-47%);
+          transform: translateX(-47%);
+  bottom: -1px;
   z-index: 1000;
-  width: 200px;
+  width: 150px;
   cursor: pointer;
 }
 
@@ -812,6 +822,10 @@ ul.ventajas li {
   max-width: 300px;
 }
 
+.btn:hover {
+  background-color: #f79400;
+}
+
 .form {
   position: relative;
   z-index: 100;
@@ -826,7 +840,7 @@ ul.ventajas li {
   background-color: #ffffff;
   backdrop-filter: blur(250px);
   -webkit-backdrop-filter: blur(250px);
-  width: 80%;
+  width: 85%;
   height: 50px;
   position: absolute;
   bottom: 34px;
@@ -941,7 +955,6 @@ a {
   color: white;
   display: block;
   margin: auto;
-  max-width: 200px;
   text-decoration: none;
 }
 
@@ -950,6 +963,7 @@ a.btn-cta {
   padding: 3% 7%;
   font-family: "Titillium Web", sans-serif;
   text-align: center;
+  font-size: 1.25rem;
 }
 
 a.btn-cta.black {
@@ -962,13 +976,17 @@ a.btn-cta.black:hover {
 
 footer {
   background-color: #161616;
-  padding-bottom: 5%;
+  padding-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  border: none;
+  bottom: -50px;
+  width: 100%;
 }
 
 footer .row {
@@ -1025,6 +1043,17 @@ footer .aviso p {
   font-weight: bolder;
   color: #fffb00;
   text-shadow: 2px 2px 5px rgba(247, 148, 0, 0.75);
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mb-1 {
@@ -1085,6 +1114,46 @@ footer .aviso p {
 
 .pt-5 {
   padding-top: 1%;
+}
+
+.px-1 {
+  padding: 0 1%;
+}
+
+.px-2 {
+  padding: 0 2%;
+}
+
+.px-3 {
+  padding: 0 3%;
+}
+
+.px-4 {
+  padding: 0 4%;
+}
+
+.px-5 {
+  padding: 0 5%;
+}
+
+.py-1 {
+  padding: 1% 0;
+}
+
+.py-2 {
+  padding: 2% 0;
+}
+
+.py-3 {
+  padding: 3% 0;
+}
+
+.py-4 {
+  padding: 4% 0;
+}
+
+.py-5 {
+  padding: 5% 0;
 }
 
 .card.static.minHeight-400 {

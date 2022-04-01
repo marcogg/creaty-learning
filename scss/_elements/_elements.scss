@@ -240,7 +240,18 @@
                 }
                 
                 button {
-                    &.btn {
+                    &.cta-btn {
+                        display: block;
+                        margin: auto;
+                        background-color: #0c0c0c;
+                        padding: 10% 25%;
+                        border: none;
+                        border-radius: 20px 20px 0 0;
+                        &:hover {
+                            background-color: $orange3;
+                        }
+                    }
+                    &.btn.acordeon {
                         padding: 5%;
                         font-family: $main-font;
                         font-weight: $font-weight-heavy;
@@ -394,16 +405,16 @@
                 .btn {
                     display: flex;
                     &.inscripcion {
-                        background-color: $black;
-                        text-align: center;
-                        border-radius: 20px 20px 0 0;
-                        // padding: 10px 15px;
-                        bottom: 0;
-                        right: 10%;
-                        left: 10%;
-                        margin: auto;
+                        // background-color: $black;
+                        // text-align: center;
+                        // border-radius: 20px 20px 0 0;
+                        // padding: 15px 5px;
+                        // position: relative;
+                        left: 47%;
+                        transform: translateX(-47%);
+                        bottom: -1px;
                         z-index: 1000;
-                        width: 200px;
+                        width: 150px;
                         cursor: pointer;
                     }
                     &.fixed {
@@ -417,9 +428,9 @@
                     & a {
                         max-width: 300px;
                     }
-                    // &:hover {
-                    //     background-color: $ye;
-                    // }
+                    &:hover {
+                        background-color: $orange3;
+                    }
                 }
                 
                 // FORMS
@@ -434,7 +445,7 @@
                         background-color: $white;
                         backdrop-filter: blur( 250px);
                         -webkit-backdrop-filter: blur( 250px);
-                        width: 80%;
+                        width: 85%;
                         height: 50px;
                         position: absolute;
                         bottom: 34px;
@@ -494,13 +505,13 @@
                     color: white;
                     display: block;
                     margin: auto;
-                    max-width: 200px;
                     text-decoration: none;
                     &.btn-cta {
                         border-radius: 10px;
                         padding: 3% 7%;
                         font-family: $main-font;
                         text-align: center;
+                        font-size: 1.25rem;
                         &.black {
                             background-color: $dark-grey;
                             &:hover {
@@ -513,9 +524,13 @@
                 //FOOTER
                 footer {
                     background-color: $dark-grey;
-                    padding-bottom: 5%;
+                    padding-bottom: 40px;
                     display: flex;
                     align-items: center;
+                    position: relative;
+                    border: none;
+                    bottom: -50px;
+                    width: 100%;
                     & .row {
                         display: flex;
                     }
@@ -566,6 +581,14 @@
                 }
                 
                 // SPACING
+                .d-flex {
+                    display: flex;
+                }
+                
+                .flex-wrap {
+                    flex-wrap: wrap;
+                }
+                
                 // MARGIN
                 .m {
                     &b {
@@ -620,6 +643,40 @@
                         }
                         &-5 {
                             padding-top: 1%;
+                        }
+                    }
+                    &x {
+                        &-1 {
+                            padding: 0 1%;
+                        }
+                        &-2 {
+                            padding: 0 2%;
+                        }
+                        &-3 {
+                            padding: 0 3%;
+                        }
+                        &-4 {
+                            padding: 0 4%;
+                        }
+                        &-5 {
+                            padding: 0 5%;
+                        }
+                    }
+                    &y {
+                        &-1 {
+                            padding: 1% 0;
+                        }
+                        &-2 {
+                            padding: 2% 0;
+                        }
+                        &-3 {
+                            padding: 3% 0;
+                        }
+                        &-4 {
+                            padding: 4% 0;
+                        }
+                        &-5 {
+                            padding: 5% 0;
                         }
                     }
                 }
