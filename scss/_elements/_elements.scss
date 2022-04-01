@@ -172,6 +172,9 @@
                 .title {
                     font-size: 3.5em !important;
                     line-height: 0.25em;
+                    &.date {
+                        text-align: right;
+                    }
                 }
                 
                 @media screen and (max-width:768px) {
@@ -558,7 +561,8 @@
                 
                 .text-important {
                     font-weight: bolder;
-                    color: $orange3;
+                    color: $yellowLemon;
+                    text-shadow: 2px 2px 5px rgba($orange3, 0.75);
                 }
                 
                 // SPACING
